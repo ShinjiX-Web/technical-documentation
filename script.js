@@ -1,39 +1,10 @@
-const modeToggle = document.getElementById("mode-toggle");
-const styleLink = document.getElementById("style-link");
+const clickableLinks = document.querySelectorAll(".nav-link");
+const clickSound = document.getElementById("click-sound");
 
-// Check the user's preference from local storage, if available
-const userPreference = localStorage.getItem("mode");
-if (userPreference === "night")
+clickableLinks.forEach(link =>
 {
-    setNightMode();
-    modeToggle.checked = true;
-} else
-{
-    setDayMode();
-}
-
-// Function to set day mode
-function setDayMode()
-{
-    styleLink.href = "day-style.css";
-    localStorage.setItem("mode", "day");
-}
-
-// Function to set night mode
-function setNightMode()
-{
-    styleLink.href = "night-style.css";
-    localStorage.setItem("mode", "night");
-}
-
-// Event listener for mode toggle switch
-modeToggle.addEventListener("change", () =>
-{
-    if (modeToggle.checked)
+    link.addEventListener("click", () =>
     {
-        setNightMode();
-    } else
-    {
-        setDayMode();
-    }
+        clickSound.play();
+    });
 });

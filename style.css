@@ -69,6 +69,10 @@ header {
     margin-bottom: 110px;
 }
 
+.java-link:hover {
+    color: #f32170;
+}
+
 section article {
     color: #4d4e53;
     margin: 15px;
@@ -112,7 +116,7 @@ svg {
 }
 
 a.nav-link:hover {
-    color: #f7f7f7 !important;
+    color: #f7f7f7 !important; 
     background-color: #4d4e53;
 }
 
