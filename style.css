@@ -107,6 +107,11 @@ svg {
     margin-right: 5px;
 }
 
+a.nav-link:hover {
+    color: #f7f7f7 !important;
+    background-color: #4d4e53;
+}
+
 @media only screen and (max-width: 815px) {
 
     /* For mobile phones: */
